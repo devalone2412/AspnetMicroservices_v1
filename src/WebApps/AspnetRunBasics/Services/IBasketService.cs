@@ -1,12 +1,11 @@
-﻿using AspnetRunBasics.Models;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using AspnetRunBasics.Models;
 
-namespace AspnetRunBasics.Services
+namespace AspnetRunBasics.Services;
+
+public interface IBasketService
 {
-    public interface IBasketService
-    {
-        Task<BasketModel> GetBasket(string userName);
-        Task<BasketModel> UpdateBasket(BasketModel model);
-        Task CheckoutBasket(BasketCheckoutModel model);
-    }
+    Task<BasketModel> GetBasket(string userName);
+    Task<BasketModel> UpdateBasket(BasketModel model);
+    Task CheckoutBasket(BasketCheckoutModel model);
 }

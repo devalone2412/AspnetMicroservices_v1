@@ -1,5 +1,5 @@
 ﻿@page
-@model AspnetRunBasics.CheckOutModel
+@model CheckOutModel
 @{
     ViewData["Title"] = "CheckOut";
 }
@@ -9,8 +9,12 @@
         <div class="col">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a asp-page="Index">Home</a></li>
-                    <li class="breadcrumb-item"><a asp-page="Cart">Cart</a></li>
+                    <li class="breadcrumb-item">
+                        <a asp-page="Index">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a asp-page="Cart">Cart</a>
+                    </li>
                     <li class="breadcrumb-item active" aria-current="page">CheckOut</li>
                 </ol>
             </nav>

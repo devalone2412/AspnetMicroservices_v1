@@ -1,18 +1,18 @@
 ﻿@page
-@model AspnetRunBasics.ConfirmationModel
+@model ConfirmationModel
 @{
     ViewData["Title"] = "Confirmation";
 }
 
 <div class="container contact-container">
     <h1 class="mt-4 mb-3">
-        Confirmation        
+        Confirmation
     </h1>
-    <hr />
+    <hr/>
     @if (!string.IsNullOrEmpty(Model.Message))
     {
         <h3>@Model.Message</h3>
     }
-    <br />
+    <br/>
     <p>If you have any further questions, you can contact us 501-222-2222.</p>
 </div>

@@ -1,5 +1,5 @@
 ﻿@page "/Product/{productId}"
-@model AspnetRunBasics.ProductDetailModel
+@model ProductDetailModel
 @{
     ViewData["Title"] = "ProductDetail";
 }
@@ -9,8 +9,12 @@
         <div class="col">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a asp-page="Index">Home</a></li>
-                    <li class="breadcrumb-item"><a asp-page="Product">Product</a></li>
+                    <li class="breadcrumb-item">
+                        <a asp-page="Index">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a asp-page="Product">Product</a>
+                    </li>
                     <li class="breadcrumb-item active" aria-current="page">@Model.Product.Name</li>
                 </ol>
             </nav>
@@ -25,7 +29,7 @@
             <div class="card bg-light mb-3">
                 <div class="card-body">
                     <a href="" data-toggle="modal" data-target="#productModal">
-                        <img class="img-fluid" src="~/images/product/@Model.Product.ImageFile.Replace('-','x')" />
+                        <img class="img-fluid" src="~/images/product/@Model.Product.ImageFile.Replace('-', 'x')"/>
                         <p class="text-center">@Model.Product.Name</p>
                     </a>
                 </div>
@@ -67,13 +71,13 @@
                         <a href="javascript:;" onclick="parentNode.submit();" class="btn btn-success btn-lg btn-block text-uppercase">
                             <i class="fa fa-shopping-cart"></i> Add To Cart
                         </a>
-                        <input type="hidden" asp-for="@Model.Product.Id" name="productId" />
+                        <input type="hidden" asp-for="@Model.Product.Id" name="productId"/>
                     </form>
                     <div class="product_rassurance">
                         <ul class="list-inline">
-                            <li class="list-inline-item"><i class="fa fa-truck fa-2x"></i><br />Fast delivery</li>
-                            <li class="list-inline-item"><i class="fa fa-credit-card fa-2x"></i><br />Secure payment</li>
-                            <li class="list-inline-item"><i class="fa fa-phone fa-2x"></i><br />+33 1 22 54 65 60</li>
+                            <li class="list-inline-item"><i class="fa fa-truck fa-2x"></i><br/>Fast delivery</li>
+                            <li class="list-inline-item"><i class="fa fa-credit-card fa-2x"></i><br/>Secure payment</li>
+                            <li class="list-inline-item"><i class="fa fa-phone fa-2x"></i><br/>+33 1 22 54 65 60</li>
                         </ul>
                     </div>
                     <div class="reviews_product p-3 mb-2 ">
@@ -101,10 +105,10 @@
                 <div class="card-header bg-primary text-white text-uppercase"><i class="fa fa-align-justify"></i> Description</div>
                 <div class="card-body">
                     <p class="card-text">
-                        @Model.Product.Summary                        
+                        @Model.Product.Summary
                     </p>
                     <p class="card-text">
-                        @Model.Product.Description                        
+                        @Model.Product.Description
                     </p>
                 </div>
             </div>
